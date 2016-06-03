@@ -18,10 +18,10 @@ which nvm || { curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0
 export NVM_DIR="/home/vagrant/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-nvm install 4.4.3
-nvm use 4.4.3
+nvm install 6.1.0
+nvm use 6.1.0
 npm i -g pre-gypify node-pre-gyp node-gyp
-node-gyp install 4.4.3
+node-gyp install 6.1.0
 
 rm -rf /work/binary-module/output
 mkdir -p /work/binary-module/output
@@ -31,7 +31,7 @@ set -x
 
 export STAGING_DIR=/home/vagrant/
 export NODEGYP=node-gyp
-export NODE=4.4.3
+export NODE=6.1.0
 export TOOLCHAIN_ARCH=mipsel
 #export ARCH=mipsel
 
@@ -47,7 +47,7 @@ if [ ! -d "$STAGING_DIR" ]; then
 fi
 
 ARCH=${ARCH:-mipsel}
-NODE=${NODE:-4.4.3}
+NODE=${NODE:-6.1.0}
 NODEGYP=${NODEGYP:-node-gyp}
 
 TOOLCHAIN_DIR=$(ls -d "$STAGING_DIR/toolchain-"*"$TOOLCHAIN_ARCH"_*)

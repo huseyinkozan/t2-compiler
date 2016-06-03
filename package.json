@@ -44,7 +44,7 @@
     "tar": "^2.2.1"
   },
   "engines": {
-    "node": "4.2.1"
+    "node": "6.1.0"
   },
   "engine-strict": true
 }

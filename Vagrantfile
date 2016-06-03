@@ -65,7 +65,7 @@ Vagrant.configure(2) do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", keep_color: true, inline: <<-SHELL
-    curl -sL https://deb.nodesource.com/setup_4.x | bash -
+    curl -sL https://deb.nodesource.com/setup_6.x | bash -
     apt-get install -y nodejs axel git
     rm -rfv toolchain*
     axel -q https://tessel-builds.s3.amazonaws.com/firmware/toolchain-mipsel.tar.gz
